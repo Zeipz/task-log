@@ -54,3 +54,14 @@ newRow.querySelector('.status').addEventListener('change', function() {
         newRow.classList.add('not-delivered');
     }
 });
+document.getElementById('deleteBtn').addEventListener('click', deleteTasks);
+
+function deleteTasks() {
+    const checkboxes = document.querySelectorAll('.delete-checkbox:checked');
+    
+    checkboxes.forEach(checkbox => {
+        const row = checkbox.closest('tr');
+        row.remove();
+    });
+}
+
