@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <h1>Registro de Tareas</h1>
-        <form id="taskForm">
+        <form id="taskForm" class="form-box">
             <input type="text" id="title" placeholder="Título de la tarea" required>
             <textarea id="description" placeholder="Descripción de la tarea" required></textarea>
             <input type="date" id="dueDate" required>
@@ -21,26 +21,35 @@
             </select>
             <button type="submit">Añadir Tarea</button>
         </form>
+        <input type="text" id="search" placeholder="Buscar por título" class="form-box">
+        <button id="searchBtn" class="button-box">Buscar</button>
+        <table id="taskTable">
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Descripción</th>
+                    <th>Fecha de Vencimiento</th>
+                    <th>Prioridad</th>
+                    <th>Estado</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <button id="deleteBtn" class="button-box">Eliminar Tareas Seleccionadas</button>
     </div>
-    <table id="taskTable">
-        <thead>
-            <tr>
-                <th>Título</th>
-                <th>Descripción</th>
-                <th>Fecha de Vencimiento</th>
-                <th>Prioridad</th>
-                <th>Estado</th>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
-    <td>
-        <input type="checkbox" class="delete-checkbox">
-    </td>
-    <button id="deleteBtn">Eliminar Tareas Seleccionadas</button>
-    <input type="text" id="search" placeholder="Buscar por título">
-<button id="searchBtn">Buscar</button>
+    
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Felicidades por realizar tu tarea, ¡Gran trabajo sigue así!</p>
+            <div class="gif-container">
+                <iframe src="https://giphy.com/embed/7rj2ZgttvgomY" width="480" height="276" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
