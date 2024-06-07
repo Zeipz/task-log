@@ -3,37 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Título de la página</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Enlace a archivo CSS externo -->
+    <title>Registro de Tareas</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Encabezado Principal</h1>
-        <nav>
-            <ul>
-                <li><a href="#section1">Sección 1</a></li>
-                <li><a href="#section2">Sección 2</a></li>
-                <li><a href="#section3">Sección 3</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="section1">
-            <h2>Sección 1</h2>
-            <p>Contenido de la sección 1.</p>
-        </section>
-        <section id="section2">
-            <h2>Sección 2</h2>
-            <p>Contenido de la sección 2.</p>
-        </section>
-        <section id="section3">
-            <h2>Sección 3</h2>
-            <p>Contenido de la sección 3.</p>
-        </section>
-    </main>
-    <footer>
-        <p>Pie de página.</p>
-    </footer>
-    <script src="script.js"></script> <!-- Enlace a archivo JavaScript externo -->
+    <div class="container">
+        <h1>Registro de Tareas</h1>
+        <form id="taskForm">
+            <input type="text" id="title" placeholder="Título de la tarea" required>
+            <textarea id="description" placeholder="Descripción de la tarea" required></textarea>
+            <input type="date" id="dueDate" required>
+            <select id="priority" required>
+                <option value="">Seleccionar prioridad</option>
+                <option value="Alta">Alta</option>
+                <option value="Media">Media</option>
+                <option value="Baja">Baja</option>
+            </select>
+            <button type="submit">Añadir Tarea</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
