@@ -64,4 +64,21 @@ function deleteTasks() {
         row.remove();
     });
 }
+document.getElementById('search').addEventListener('input', searchTasks);
+document.getElementById('searchBtn').addEventListener('click', searchTasks);
+
+function searchTasks() {
+    const query = document.getElementById('search').value.toLowerCase();
+    const rows = document.querySelectorAll('#taskTable tbody tr');
+    
+    rows.forEach(row => {
+        const title = row.cells[0].textContent.toLowerCase();
+        
+        if (title.includes(query)) {
+            row.style.display = '';
+        } else {
+            row.style.display = 'none';
+        }
+    });
+}
 
