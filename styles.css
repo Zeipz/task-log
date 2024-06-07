@@ -37,3 +37,15 @@ form button:hover {
     background-color: #45a049;
     transform: scale(1.05);
 }
+
+.task-row.pending {
+    background-color: rgba(255, 255, 0, 0.2);
+}
+
+.task-row.completed {
+    background-color: rgba(0, 255, 0, 0.2);
+}
+
+.task-row.not-delivered {
+    background-color: rgba(255, 0, 0, 0.2);
+}

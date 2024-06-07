@@ -41,3 +41,16 @@ function addTask(event) {
     
     document.getElementById('taskForm').reset();
 }
+newRow.querySelector('.status').addEventListener('change', function() {
+    const status = this.value;
+    newRow.classList.remove('pending', 'completed', 'not-delivered');
+    
+    if (status === 'Pendiente') {
+        newRow.classList.add('pending');
+    } else if (status === 'Realizada') {
+        newRow.classList.add('completed');
+        alert('Felicidades por realizar tu tarea, ¡Gran trabajo sigue así!');
+    } else if (status === 'No entregada') {
+        newRow.classList.add('not-delivered');
+    }
+});
